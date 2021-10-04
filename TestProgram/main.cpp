@@ -40,14 +40,16 @@ void selected_operation(int operation) {
 
 int main() {
 	int select;
-	cout << "[1] Dodaj pliki txt" << endl << "[2] Lista Plikow" << endl << "[3] Dodaj tekst" << endl;
-	cin >> select;
-	selected_operation(select);
-	while (select != 0) {
-		cout << "[1] Dodaj pliki txt" << endl << "[2] Lista Plikow" << endl << "[3] Dodaj tekst" << endl;
+	while (true) {
+		cout << "[1] Dodaj pliki txt" << endl << "[2] Lista Plikow" << endl << "[3] Dodaj tekst" << endl << "[0] Wyjœcie" << endl;
 		cin >> select;
-		selected_operation(select);
+		if (!select) break;
+		else {
+			selected_operation(select);
+		}
+		
 	}
+
 }
 
 
