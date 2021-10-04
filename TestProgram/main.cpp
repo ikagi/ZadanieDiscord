@@ -22,17 +22,17 @@ void selected_operation(int operation) {
 		int files_size = files.size();
 		for (int i = 0; i<files_size; i++) {
 			cout << files[i] << endl;
-			string filename = "file" + i;
-			//fstream filename;
 		}
 		return;
 	}
 	if (operation == 3) {
-		int files_size = files.size();
-		for (int i = 0; i < files_size; i++) {
-			string filename = "file" + i;
-			cout << filename << endl;
-		}
+		string Text;
+		cout << "Podaj tekst do dodania" << endl;
+		cin >> Text;
+		fstream filename;
+		filename.open("1.txt", ios::out);
+		filename << Text << "\n";
+		
 		return;
 	}
 }
