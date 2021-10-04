@@ -39,9 +39,11 @@ void selected_operation(int operation) {
 
 
 int main() {
-	int a = 1;
-	while (a==1) {
-		int select;
+	int select;
+	cout << "[1] Dodaj pliki txt" << endl << "[2] Lista Plikow" << endl << "[3] Dodaj tekst" << endl;
+	cin >> select;
+	selected_operation(select);
+	while (select != 0) {
 		cout << "[1] Dodaj pliki txt" << endl << "[2] Lista Plikow" << endl << "[3] Dodaj tekst" << endl;
 		cin >> select;
 		selected_operation(select);
